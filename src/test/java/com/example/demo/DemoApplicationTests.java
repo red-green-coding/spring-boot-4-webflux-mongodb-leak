@@ -14,11 +14,9 @@ import org.springframework.boot.test.system.CapturedOutput;
 import org.springframework.boot.test.system.OutputCaptureExtension;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
 import org.testcontainers.mongodb.MongoDBContainer;
 import org.testcontainers.utility.DockerImageName;
 
-@Import(DemoApplicationTests.TestcontainersConfiguration.class)
 @SpringBootTest
 @ExtendWith(OutputCaptureExtension.class)
 class DemoApplicationTests {
@@ -40,8 +38,7 @@ class DemoApplicationTests {
   }
 
   @TestConfiguration(proxyBeanMethods = false)
-  static
-  class TestcontainersConfiguration {
+  static class TestcontainersConfiguration {
 
     @Bean
     @ServiceConnection
