@@ -17,6 +17,8 @@ If either of the following dependencies is removed, the leak does not occur:
 </dependency>
 ```
 
+Switching back to Spring Boot `4.0.0` also makes the leak message disappear.
+
 ```
 2026-01-08T18:06:35.175+01:00 ERROR 29243 --- [demo] [tter-2-thread-1] io.netty.util.ResourceLeakDetector       : LEAK: ByteBuf.release() was not called before it's garbage-collected. See https://netty.io/wiki/reference-counted-objects.html for more information.
 Recent access records: 
